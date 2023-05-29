@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:midas_coffee_app/app.dart';
 
-void main() {
+import 'screens/app/index.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await DependencyInjection.init();
   runApp(const CoffeeApp());
 }
