@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 
 import 'controller.dart';
 
-class HomeScreen extends GetView<HomeController> {
-  const HomeScreen({super.key});
+class ProfileView extends GetView<ProfileController> {
+  const ProfileView({super.key});
 
   @override
   Widget build(BuildContext context) {
