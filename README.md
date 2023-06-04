@@ -5,9 +5,12 @@ midas-coffee-web-flutter
 [v] getX로 상태관리, 국제화?
 [v] go_router로 라우터 설정
 [v] splash 화면 설정
-[] get_it: di 설정
+[v] get_it: di 세팅
+[] 화면 ui, animation 그려보기
 [] firebase 통한 로그인 설정? // firebase appTracking 할 때 필요함
 [] supabase 도 세팅해보기 // 기능이 전부 구현된게 아니라서,,, 써야함
+[] theme 세팅
+[] api call 핸들링
 
 - 라우터 구조
 
@@ -19,3 +22,5 @@ midas-coffee-web-flutter
 - splash command
   `flutter pub run flutter_native_splash:create --path=flutter_native_splash.yaml`
   `flutter pub run flutter_native_splash:remove`
+
+-

@@ -2,7 +2,7 @@ import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:midas_coffee_app/screens/home/index.dart';
 
-import '../screens/profile/index.dart';
+import 'screens/profile/index.dart';
 
 class ScreenPaths {
   static String splash = '/';
