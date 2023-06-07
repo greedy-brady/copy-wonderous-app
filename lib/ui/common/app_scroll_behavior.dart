@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/gestures.dart';
-import 'package:midas_coffee_app/core/logic/platform_info.dart';
+import 'package:midas_coffee_app/logic/common/platform_info.dart';
 
 class AppScrollBehavior extends ScrollBehavior {
   @override

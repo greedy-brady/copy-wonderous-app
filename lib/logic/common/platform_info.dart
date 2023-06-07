@@ -1,4 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
+import 'package:internet_connection_checker/internet_connection_checker.dart';
 
 class PlatformInfo {
   static const _desktopPlatforms = [
@@ -14,8 +18,8 @@ class PlatformInfo {
   static bool get isMobile =>
       _mobilePlatforms.contains(defaultTargetPlatform) && !kIsWeb;
 
-  // static double get pixelRatio =>
-  //     WidgetsBinding.instance.platformDispatcher.views.first.devicePixelRatio;
+  static double get pixelRatio =>
+      WidgetsBinding.instance.platformDispatcher.views.first.devicePixelRatio;
 
   static bool get isWindows => defaultTargetPlatform == TargetPlatform.windows;
   static bool get isLinux => defaultTargetPlatform == TargetPlatform.linux;
@@ -23,7 +27,7 @@ class PlatformInfo {
   static bool get isAndroid => defaultTargetPlatform == TargetPlatform.android;
   static bool get isIOS => defaultTargetPlatform == TargetPlatform.iOS;
 
-  // static Future<bool> get isConnected async =>
-  //     await InternetConnectionChecker().hasConnection;
-  // static Future<bool> get isDisconnected async => (await isConnected) == false;
+  static Future<bool> get isConnected async =>
+      await InternetConnectionChecker().hasConnection;
+  static Future<bool> get isDisconnected async => (await isConnected) == false;
 }
