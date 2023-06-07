@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 
 import 'ui/app_scaffold.dart';
@@ -13,9 +14,19 @@ class ScreenPaths {
 }
 
 final appRouter = GoRouter(
+  initialLocation: ScreenPaths.home,
   routes: [
     ShellRoute(
-      builder: (context, state, child) => CoffeeAppScaffold(child: child),
-    )
+        builder: (context, state, navigator) {
+          return CoffeeAppScaffold(child: navigator);
+        },
+        routes: [
+          GoRoute(
+            path: ScreenPaths.home,
+            builder: (context, state) {
+              return const Text("hello");
+            },
+          ),
+        ])
   ],
 );
