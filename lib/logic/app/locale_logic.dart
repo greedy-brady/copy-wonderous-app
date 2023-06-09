@@ -19,7 +19,7 @@ class LocaleLogic {
       return; // exit early on web as [findSystemLocale] throws errors as of Dec, 2022
     }
     if (kDebugMode) {
-      // locale = Locale('zh'); // uncomment to test chinese
+      locale = Locale('zh'); // uncomment to test chinese
     }
     final localeCode =
         settingsLogic.currentLocale.value ?? await findSystemLocale();

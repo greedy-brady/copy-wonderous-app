@@ -10,6 +10,7 @@ import 'package:midas_coffee_app/ui/app_scaffold.dart';
 import 'logic/app/app_logic.dart';
 import 'logic/app/locale_logic.dart';
 import 'logic/app/settings_logic.dart';
+import 'logic/app/wonders_logic.dart';
 import 'router.dart';
 
 void main() async {
@@ -52,11 +53,14 @@ void registerSingletons() {
   GetIt.I.registerLazySingleton<SettingsLogic>(() => SettingsLogic());
   // Top level app controller
   GetIt.I.registerLazySingleton<AppLogic>(() => AppLogic());
+  // Wonders
+  GetIt.I.registerLazySingleton<WondersLogic>(() => WondersLogic());
 }
 
 LocaleLogic get localeLogic => GetIt.I.get<LocaleLogic>();
 SettingsLogic get settingsLogic => GetIt.I.get<SettingsLogic>();
 AppLogic get appLogic => GetIt.I.get<AppLogic>();
+WondersLogic get wondersLogic => GetIt.I.get<WondersLogic>();
 
 AppLocalizations get $strings => localeLogic.strings;
 AppStyle get $styles => CoffeeAppScaffold.style;
